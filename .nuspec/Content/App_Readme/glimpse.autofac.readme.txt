@@ -1,0 +1,3 @@
+Glimpse.Autofac adds one Glimpse plugin; Autofac
+
+To activate Glimpse for Autofac, simply call container.ActivateGlimpse()
