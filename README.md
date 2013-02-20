@@ -9,7 +9,8 @@ This is a simple Glimpse plugin to show Autofac registrations and resolutions.
 Usage
 -----
 
-Either build the project and reference the Glimpse.Autofac.dll in your Glimpse-enabled prject or execute `Install-Package Glimpse.Autofac` in the Package Manager Console to install the NuGet package.  
+Either build the project and reference the `Glimpse.Autofac.dll` in your Glimpse-enabled prject or execute `Install-Package Glimpse.Autofac` in the Package Manager Console to install the [NuGet package](http://nuget.org/packages/Glimpse.Autofac).  
+
 To enable the plugin, you have to call the `ActivateGlimpse()` extension method on your `IContainer`.
 
 Support
