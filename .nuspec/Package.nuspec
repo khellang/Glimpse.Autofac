@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Glimpse.Autofac</id>
-        <version>0.1.0</version>
+        <version>0.2.0</version>
         <title>Glimpse for Autofac</title>
         <authors>Kristian Hellang</authors>
         <owners>khellang</owners>
@@ -10,14 +10,15 @@
         <projectUrl>https://github.com/khellang/Glimpse.Autofac</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>A Glimpse plugin to show Autofac registrations and resolutions</description>
+        <releaseNotes>Updated to Glimpse 1.0.0!</releaseNotes>
         <tags>glimpse autofac</tags>
         <dependencies>
-            <dependency id="Glimpse" version="0.86" />
+            <dependency id="Glimpse" version="1.0.0" />
             <dependency id="Autofac" version="3.0.0" />
         </dependencies>
     </metadata>
     <files>
-        <file src="Content\App_Readme\glimpse.autofac.readme.txt" target="Content\App_Readme\glimpse.autofac.readme.txt" />
+        <file src="content\App_Readme\glimpse.autofac.readme.txt" target="Content\App_Readme\glimpse.autofac.readme.txt" />
         <file src="..\Glimpse.Autofac\bin\Release\Glimpse.Autofac.dll" target="lib\net40\Glimpse.Autofac.dll" />
         <file src="..\Glimpse.Autofac\bin\Release\Glimpse.Autofac.pdb" target="lib\net40\Glimpse.Autofac.pdb" />
         <file src="..\Glimpse.Autofac\bin\Release\Glimpse.Autofac.XML" target="lib\net40\Glimpse.Autofac.XML" />

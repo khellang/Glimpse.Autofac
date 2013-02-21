@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 using Autofac;
 using Autofac.Core;
@@ -10,14 +9,13 @@ using Glimpse.Core.Extensibility;
 
 namespace Glimpse.Autofac
 {
-    [GlimpsePlugin]
-    public class AutofacGlimpsePlugin : IGlimpsePlugin
+    public class AutofacGlimpsePlugin : TabBase
     {
         public static IContainer ContainerInstance { private get; set; }
 
-        public string Name { get { return "Autofac"; } }
+        public override string Name { get { return "Autofac"; } }
 
-        public object GetData(HttpContextBase context)
+        public override object GetData(ITabContext context)
         {
             if (ContainerInstance == null) return null;
 
@@ -35,8 +33,6 @@ namespace Glimpse.Autofac
 
             return data;
         }
-
-        public void SetupInit() { /* Not needed */ }
 
         private static string GetServiceName(Service service)
         {
