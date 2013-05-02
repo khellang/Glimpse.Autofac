@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Glimpse.Autofac</id>
-        <version>0.2.1</version>
+        <version>0.2.2</version>
         <title>Glimpse for Autofac</title>
         <authors>Kristian Hellang</authors>
         <owners>khellang</owners>
@@ -10,7 +10,7 @@
         <projectUrl>https://github.com/khellang/Glimpse.Autofac</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>A Glimpse plugin to show Autofac registrations and resolutions</description>
-        <releaseNotes>Downgraded Autofac dependency to 2.6.3.862</releaseNotes>
+        <releaseNotes>Downgraded Autofac dependency to 2.6.3.862 to support Autofac.Mvc3</releaseNotes>
         <tags>glimpse autofac</tags>
         <dependencies>
             <dependency id="Glimpse" version="1.0.0" />
@@ -22,6 +22,6 @@
         <file src="..\Glimpse.Autofac\bin\Release\Glimpse.Autofac.pdb" target="lib\net40\Glimpse.Autofac.pdb" />
         <file src="..\Glimpse.Autofac\bin\Release\Glimpse.Autofac.XML" target="lib\net40\Glimpse.Autofac.XML" />
         <file src="tools\install.ps1" target="tools\install.ps1" />
-        <file src="content\App_Readme\glimpse.autofac.readme.txt" target="readme.txt" />
+        <file src="readme.txt" target="readme.txt" />
     </files>
 </package>

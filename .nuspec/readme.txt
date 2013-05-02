@@ -5,4 +5,4 @@ To activate Glimpse for Autofac, simply call container.ActivateGlimpse()
 Release Notes
 -------------------------
 0.2.0 - Updated to Glimpse 1.0.0
-0.2.1 - Downgraded Autofac dependency to 2.6.3.862, in order to work with Autofac.Mvc3
+0.2.2 - Downgraded Autofac dependency to 2.6.3.862, in order to work with Autofac.Mvc3
