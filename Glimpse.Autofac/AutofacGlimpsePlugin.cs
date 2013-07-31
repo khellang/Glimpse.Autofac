@@ -11,7 +11,7 @@ namespace Glimpse.Autofac
 {
     public class AutofacGlimpsePlugin : TabBase
     {
-        public static IContainer ContainerInstance { private get; set; }
+        internal static IContainer ContainerInstance { private get; set; }
 
         public override string Name { get { return "Autofac"; } }
 
@@ -25,32 +25,13 @@ namespace Glimpse.Autofac
 
             data.AddRange(registrations.Select(registration => new object[]
             {
-                registration.Services.Select(GetServiceName),
+                registration.Services.Select(service => service.GetName()),
                 registration.Activator.LimitType.GetFriendlyName(),
                 Enum.GetName(typeof(InstanceOwnership), registration.Ownership), 
                 Enum.GetName(typeof(InstanceSharing), registration.Sharing)
             }));
 
             return data;
-        }
-
-        private static string GetServiceName(Service service)
-        {
-            string serviceName = null;
-
-            var serviceWithType = service as IServiceWithType;
-            if (serviceWithType != null)
-            {
-                serviceName = serviceWithType.ServiceType.GetFriendlyName();
-            }
-
-            var keyedService = service as KeyedService;
-            if (keyedService != null)
-            {
-                serviceName += string.Format(" ({0})", keyedService.ServiceKey);
-            }
-
-            return serviceName;
         }
     }
 }
